@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.7.6 on darwin)" generated="20210209 16:08:23.659" rpa="false">
-<suite id="s1" name="Example01 Open Android App" source="/Users/vanut/Desktop/All Project/PIP_Robot_Mobile/Example01_Open_Android_App.robot">
+<robot generator="Robot 3.2.2 (Python 3.7.6 on darwin)" generated="20210209 16:57:49.447" rpa="false">
+<suite id="s1" name="Scroll to element" source="/Users/vanut/Desktop/All Project/PIP_Robot_Mobile/src/Scroll_to_element.robot">
 <test id="s1-t1" name="Open Android app">
 <kw name="Open Application Android">
 <kw name="Open Application" library="AppiumLibrary">
@@ -17,11 +17,34 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>app=${APP_ANDROID}</arg>
 <arg>automationName=${AUTOMATION_NAME}</arg>
 </arguments>
-<status status="PASS" starttime="20210209 16:08:24.057" endtime="20210209 16:08:42.588"></status>
+<status status="PASS" starttime="20210209 16:57:49.754" endtime="20210209 16:58:05.569"></status>
 </kw>
-<status status="PASS" starttime="20210209 16:08:24.041" endtime="20210209 16:08:42.589"></status>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Path}</arg>
+<arg>/Users/vanut/Desktop/All Project/PIP_Robot_Mobile/src${/}..${/}${/}screenshot${/}</arg>
+</arguments>
+<msg timestamp="20210209 16:58:05.570" level="INFO">${Path} = /Users/vanut/Desktop/All Project/PIP_Robot_Mobile/src/..//screenshot/</msg>
+<status status="PASS" starttime="20210209 16:58:05.569" endtime="20210209 16:58:05.570"></status>
 </kw>
-<status status="PASS" starttime="20210209 16:08:24.031" endtime="20210209 16:08:42.590" critical="yes"></status>
+<kw name="Set Screenshot Directory" library="Screenshot">
+<doc>Sets the directory where screenshots are saved.</doc>
+<arguments>
+<arg>${Path}</arg>
+</arguments>
+<status status="PASS" starttime="20210209 16:58:05.570" endtime="20210209 16:58:05.571"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}Screenshot</arg>
+</arguments>
+<status status="PASS" starttime="20210209 16:58:05.571" endtime="20210209 16:58:05.572"></status>
+</kw>
+<status status="PASS" starttime="20210209 16:57:49.753" endtime="20210209 16:58:05.572"></status>
+</kw>
+<status status="PASS" starttime="20210209 16:57:49.753" endtime="20210209 16:58:05.572" critical="yes"></status>
 </test>
 <test id="s1-t2" name="TEST_CASE Scroll to View">
 <kw name="Wait Until Element Is Visible" library="AppiumLibrary">
@@ -29,15 +52,15 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>accessibility_id=Views</arg>
 </arguments>
-<status status="PASS" starttime="20210209 16:08:42.592" endtime="20210209 16:08:42.816"></status>
+<status status="PASS" starttime="20210209 16:58:05.573" endtime="20210209 16:58:05.773"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>accessibility_id=Views</arg>
 </arguments>
-<msg timestamp="20210209 16:08:42.819" level="INFO">Clicking element 'accessibility_id=Views'.</msg>
-<status status="PASS" starttime="20210209 16:08:42.817" endtime="20210209 16:08:43.947"></status>
+<msg timestamp="20210209 16:58:05.776" level="INFO">Clicking element 'accessibility_id=Views'.</msg>
+<status status="PASS" starttime="20210209 16:58:05.774" endtime="20210209 16:58:06.599"></status>
 </kw>
 <kw name="IF_ELSE_CONDITION">
 <kw name="${i} IN RANGE [ 0 | 10 ]" type="for">
@@ -58,14 +81,14 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 </arguments>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20210209 16:08:45.864" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210209 16:08:44.594" endtime="20210209 16:08:45.864"></status>
+<msg timestamp="20210209 16:58:08.240" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210209 16:58:06.942" endtime="20210209 16:58:08.240"></status>
 </kw>
-<msg timestamp="20210209 16:08:45.867" level="FAIL">ValueError: Element locator 'accessibility_id=ScrollBars' did not match any elements.</msg>
-<status status="FAIL" starttime="20210209 16:08:43.949" endtime="20210209 16:08:45.867"></status>
+<msg timestamp="20210209 16:58:08.242" level="FAIL">ValueError: Element locator 'accessibility_id=ScrollBars' did not match any elements.</msg>
+<status status="FAIL" starttime="20210209 16:58:06.600" endtime="20210209 16:58:08.242"></status>
 </kw>
-<msg timestamp="20210209 16:08:45.867" level="INFO">${CHECK_ELEMENT} = False</msg>
-<status status="PASS" starttime="20210209 16:08:43.949" endtime="20210209 16:08:45.867"></status>
+<msg timestamp="20210209 16:58:08.242" level="INFO">${CHECK_ELEMENT} = False</msg>
+<status status="PASS" starttime="20210209 16:58:06.600" endtime="20210209 16:58:08.242"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -95,11 +118,11 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arg>20</arg>
 <arg>50</arg>
 </arguments>
-<status status="PASS" starttime="20210209 16:08:45.868" endtime="20210209 16:08:49.075"></status>
+<status status="PASS" starttime="20210209 16:58:08.243" endtime="20210209 16:58:10.395"></status>
 </kw>
-<status status="PASS" starttime="20210209 16:08:45.867" endtime="20210209 16:08:49.076"></status>
+<status status="PASS" starttime="20210209 16:58:08.242" endtime="20210209 16:58:10.395"></status>
 </kw>
-<status status="PASS" starttime="20210209 16:08:43.948" endtime="20210209 16:08:49.076"></status>
+<status status="PASS" starttime="20210209 16:58:06.600" endtime="20210209 16:58:10.395"></status>
 </kw>
 <kw name="${i} = 1" type="foritem">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -118,14 +141,14 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 </arguments>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20210209 16:08:49.585" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210209 16:08:49.137" endtime="20210209 16:08:49.586"></status>
+<msg timestamp="20210209 16:58:10.997" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210209 16:58:10.462" endtime="20210209 16:58:10.997"></status>
 </kw>
-<msg timestamp="20210209 16:08:49.586" level="FAIL">ValueError: Element locator 'accessibility_id=ScrollBars' did not match any elements.</msg>
-<status status="FAIL" starttime="20210209 16:08:49.076" endtime="20210209 16:08:49.586"></status>
+<msg timestamp="20210209 16:58:10.998" level="FAIL">ValueError: Element locator 'accessibility_id=ScrollBars' did not match any elements.</msg>
+<status status="FAIL" starttime="20210209 16:58:10.395" endtime="20210209 16:58:10.998"></status>
 </kw>
-<msg timestamp="20210209 16:08:49.586" level="INFO">${CHECK_ELEMENT} = False</msg>
-<status status="PASS" starttime="20210209 16:08:49.076" endtime="20210209 16:08:49.586"></status>
+<msg timestamp="20210209 16:58:10.998" level="INFO">${CHECK_ELEMENT} = False</msg>
+<status status="PASS" starttime="20210209 16:58:10.395" endtime="20210209 16:58:10.998"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -155,11 +178,11 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arg>20</arg>
 <arg>50</arg>
 </arguments>
-<status status="PASS" starttime="20210209 16:08:49.587" endtime="20210209 16:08:51.554"></status>
+<status status="PASS" starttime="20210209 16:58:10.999" endtime="20210209 16:58:14.430"></status>
 </kw>
-<status status="PASS" starttime="20210209 16:08:49.586" endtime="20210209 16:08:51.554"></status>
+<status status="PASS" starttime="20210209 16:58:10.998" endtime="20210209 16:58:14.430"></status>
 </kw>
-<status status="PASS" starttime="20210209 16:08:49.076" endtime="20210209 16:08:51.554"></status>
+<status status="PASS" starttime="20210209 16:58:10.395" endtime="20210209 16:58:14.430"></status>
 </kw>
 <kw name="${i} = 2" type="foritem">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -178,14 +201,14 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 </arguments>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20210209 16:08:52.119" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-3.png"&gt;&lt;img src="appium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210209 16:08:51.706" endtime="20210209 16:08:52.119"></status>
+<msg timestamp="20210209 16:58:15.256" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-3.png"&gt;&lt;img src="appium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210209 16:58:14.758" endtime="20210209 16:58:15.256"></status>
 </kw>
-<msg timestamp="20210209 16:08:52.120" level="FAIL">ValueError: Element locator 'accessibility_id=ScrollBars' did not match any elements.</msg>
-<status status="FAIL" starttime="20210209 16:08:51.555" endtime="20210209 16:08:52.120"></status>
+<msg timestamp="20210209 16:58:15.257" level="FAIL">ValueError: Element locator 'accessibility_id=ScrollBars' did not match any elements.</msg>
+<status status="FAIL" starttime="20210209 16:58:14.431" endtime="20210209 16:58:15.257"></status>
 </kw>
-<msg timestamp="20210209 16:08:52.120" level="INFO">${CHECK_ELEMENT} = False</msg>
-<status status="PASS" starttime="20210209 16:08:51.554" endtime="20210209 16:08:52.120"></status>
+<msg timestamp="20210209 16:58:15.257" level="INFO">${CHECK_ELEMENT} = False</msg>
+<status status="PASS" starttime="20210209 16:58:14.431" endtime="20210209 16:58:15.257"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -215,11 +238,11 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arg>20</arg>
 <arg>50</arg>
 </arguments>
-<status status="PASS" starttime="20210209 16:08:52.122" endtime="20210209 16:08:54.490"></status>
+<status status="PASS" starttime="20210209 16:58:15.258" endtime="20210209 16:58:17.182"></status>
 </kw>
-<status status="PASS" starttime="20210209 16:08:52.121" endtime="20210209 16:08:54.490"></status>
+<status status="PASS" starttime="20210209 16:58:15.258" endtime="20210209 16:58:17.182"></status>
 </kw>
-<status status="PASS" starttime="20210209 16:08:51.554" endtime="20210209 16:08:54.490"></status>
+<status status="PASS" starttime="20210209 16:58:14.431" endtime="20210209 16:58:17.182"></status>
 </kw>
 <kw name="${i} = 3" type="foritem">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -236,10 +259,10 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arguments>
 <arg>accessibility_id=ScrollBars</arg>
 </arguments>
-<status status="PASS" starttime="20210209 16:08:54.490" endtime="20210209 16:08:54.748"></status>
+<status status="PASS" starttime="20210209 16:58:17.183" endtime="20210209 16:58:17.254"></status>
 </kw>
-<msg timestamp="20210209 16:08:54.748" level="INFO">${CHECK_ELEMENT} = True</msg>
-<status status="PASS" starttime="20210209 16:08:54.490" endtime="20210209 16:08:54.748"></status>
+<msg timestamp="20210209 16:58:17.254" level="INFO">${CHECK_ELEMENT} = True</msg>
+<status status="PASS" starttime="20210209 16:58:17.183" endtime="20210209 16:58:17.254"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -284,39 +307,47 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <arguments>
 <arg>accessibility_id=ScrollBars</arg>
 </arguments>
-<msg timestamp="20210209 16:08:54.752" level="INFO">Clicking element 'accessibility_id=ScrollBars'.</msg>
-<status status="PASS" starttime="20210209 16:08:54.750" endtime="20210209 16:08:54.845"></status>
+<msg timestamp="20210209 16:58:17.258" level="INFO">Clicking element 'accessibility_id=ScrollBars'.</msg>
+<status status="PASS" starttime="20210209 16:58:17.256" endtime="20210209 16:58:18.246"></status>
 </kw>
-<status status="PASS" starttime="20210209 16:08:54.750" endtime="20210209 16:08:54.845"></status>
+<status status="PASS" starttime="20210209 16:58:17.255" endtime="20210209 16:58:18.246"></status>
 </kw>
 <kw name="Exit For Loop" library="BuiltIn">
 <doc>Stops executing the enclosing for loop.</doc>
-<msg timestamp="20210209 16:08:54.846" level="INFO">Exiting for loop altogether.</msg>
-<status status="PASS" starttime="20210209 16:08:54.845" endtime="20210209 16:08:54.846"></status>
+<msg timestamp="20210209 16:58:18.247" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20210209 16:58:18.247" endtime="20210209 16:58:18.247"></status>
 </kw>
-<status status="PASS" starttime="20210209 16:08:54.749" endtime="20210209 16:08:54.846"></status>
+<status status="PASS" starttime="20210209 16:58:17.255" endtime="20210209 16:58:18.247"></status>
 </kw>
-<status status="PASS" starttime="20210209 16:08:54.749" endtime="20210209 16:08:54.846"></status>
+<status status="PASS" starttime="20210209 16:58:17.254" endtime="20210209 16:58:18.247"></status>
 </kw>
-<status status="PASS" starttime="20210209 16:08:54.490" endtime="20210209 16:08:54.846"></status>
+<status status="PASS" starttime="20210209 16:58:17.182" endtime="20210209 16:58:18.247"></status>
 </kw>
-<status status="PASS" starttime="20210209 16:08:43.948" endtime="20210209 16:08:54.846"></status>
+<status status="PASS" starttime="20210209 16:58:06.599" endtime="20210209 16:58:18.247"></status>
 </kw>
-<status status="PASS" starttime="20210209 16:08:43.947" endtime="20210209 16:08:54.846"></status>
+<status status="PASS" starttime="20210209 16:58:06.599" endtime="20210209 16:58:18.247"></status>
 </kw>
-<status status="PASS" starttime="20210209 16:08:42.591" endtime="20210209 16:08:54.846" critical="yes"></status>
+<kw name="Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<arguments>
+<arg>my_image.jpg</arg>
+</arguments>
+<msg timestamp="20210209 16:58:19.463" level="INFO" html="yes">&lt;a href="../screenshot/my_image.jpg"&gt;&lt;img src="../screenshot/my_image.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210209 16:58:18.247" endtime="20210209 16:58:19.464"></status>
+</kw>
+<status status="PASS" starttime="20210209 16:58:05.573" endtime="20210209 16:58:19.464" critical="yes"></status>
 </test>
 <test id="s1-t3" name="Close Application">
 <kw name="Close All Application">
 <kw name="Close All Applications" library="AppiumLibrary">
 <doc>Closes all open applications.</doc>
-<status status="PASS" starttime="20210209 16:08:54.848" endtime="20210209 16:08:58.092"></status>
+<status status="PASS" starttime="20210209 16:58:19.466" endtime="20210209 16:58:21.686"></status>
 </kw>
-<status status="PASS" starttime="20210209 16:08:54.847" endtime="20210209 16:08:58.092"></status>
+<status status="PASS" starttime="20210209 16:58:19.466" endtime="20210209 16:58:21.686"></status>
 </kw>
-<status status="PASS" starttime="20210209 16:08:54.847" endtime="20210209 16:08:58.092" critical="yes"></status>
+<status status="PASS" starttime="20210209 16:58:19.465" endtime="20210209 16:58:21.686" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20210209 16:08:23.661" endtime="20210209 16:08:58.095"></status>
+<status status="PASS" starttime="20210209 16:57:49.449" endtime="20210209 16:58:21.690"></status>
 </suite>
 <statistics>
 <total>
@@ -326,7 +357,7 @@ Normal swipe fails to scale for different screen resolutions, this can be avoide
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" id="s1" name="Example01 Open Android App">Example01 Open Android App</stat>
+<stat pass="3" fail="0" id="s1" name="Scroll to element">Scroll to element</stat>
 </suite>
 </statistics>
 <errors>
