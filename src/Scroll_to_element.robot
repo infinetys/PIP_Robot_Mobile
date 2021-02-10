@@ -1,16 +1,17 @@
 *** Settings ***
 Library           AppiumLibrary
-Library           Screenshot
 
 *** Variables ***
 ${REMOTE_URL}     http://127.0.0.1:4723/wd/hub
 ${PLATFORM_NAME_ANDROID}    Android
 ${DEVICE_NAME_ANDROID}    emulator-5554
-${APP_ANDROID}      ${CURDIR}${/}..${/}${/}app${/}ApiDemos-debug.apk
+${APP_ANDROID}      ${CURDIR}${/}..${/}${/}app${/}android${/}ApiDemos-debug.apk
 ${AUTOMATION_NAME}    appium
+
 
 *** Test Cases ***
 Open Android app
+    
     Open Application Android
 
 TEST_CASE Scroll to View

@@ -8,6 +8,8 @@ verify_ssl = true
 [packages]
 robotframework-appiumlibrary = "*"
 robotframework = "*"
+robotframework-ride = "*"
+wxpython = "*"
 
 [requires]
 python_version = "3.7"
